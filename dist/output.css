@@ -580,9 +580,9 @@ section{
   width: 100%;
 }
 
-@media (min-width: 480px){
+@media (min-width: 427px){
   .container{
-    max-width: 480px;
+    max-width: 427px;
   }
 }
 
@@ -783,8 +783,8 @@ section{
   margin-left: -0.25rem;
 }
 
-.-ml-16{
-  margin-left: -4rem;
+.-ml-2{
+  margin-left: -0.5rem;
 }
 
 .-mr-2{
@@ -949,22 +949,6 @@ section{
 
 .mt-\[0\.68rem\]{
   margin-top: 0.68rem;
-}
-
-.-ml-10{
-  margin-left: -2.5rem;
-}
-
-.-ml-8{
-  margin-left: -2rem;
-}
-
-.-ml-5{
-  margin-left: -1.25rem;
-}
-
-.-ml-2{
-  margin-left: -0.5rem;
 }
 
 .block{
@@ -1750,7 +1734,7 @@ section{
   transition-duration: 150ms;
 }
 
-@media (min-width: 480px){
+@media (min-width: 427px){
   .sm\:block{
     display: block;
   }
