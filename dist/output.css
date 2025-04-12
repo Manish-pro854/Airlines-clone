@@ -783,8 +783,8 @@ section{
   margin-left: -0.25rem;
 }
 
-.-ml-12{
-  margin-left: -3rem;
+.-ml-16{
+  margin-left: -4rem;
 }
 
 .-mr-2{
@@ -949,6 +949,22 @@ section{
 
 .mt-\[0\.68rem\]{
   margin-top: 0.68rem;
+}
+
+.-ml-10{
+  margin-left: -2.5rem;
+}
+
+.-ml-8{
+  margin-left: -2rem;
+}
+
+.-ml-5{
+  margin-left: -1.25rem;
+}
+
+.-ml-2{
+  margin-left: -0.5rem;
 }
 
 .block{
