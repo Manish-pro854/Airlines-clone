@@ -1,0 +1,3342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/airplane logo.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- link for remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="nav" class="fixed top-0 border-b w-full bg-[#ffffff] z-50 hidden md:block">
+      <nav class="mx-auto w-full h-[70px] relative mb-1">
+          <div class="flex justify-between mx-5 pt-[15px]">
+          <!-- logo image  -->
+          <div>
+              <a href="">
+                  <img src="./images/logo-44edf9f1.svg" alt="">
+              </a>
+          </div>
+          <!-- scroll div  -->
+           <div id="gayab" class="-ml-12 hidden items-center">
+           <div class="flex gap-6">
+                  <button class="tab-lin flex gap-2 items-center relative" onclick="setActiveTab(event, 0)">
+                      <img src="./images/flight-f515b25a.svg" class="w-10 h-10" alt="">
+                      <span class="font-mulish font-bold">Flights</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2"></div>
+                  </button>
+                  <button class="tab-lin flex gap-2 items-center relative" onclick="setActiveTab(event, 1)">
+                      <img src="./images/hotel-4b63222d.svg" class="w-10 h-10" alt="">
+                      <span class="font-mulish font-bold">Hotels</span>
+                      <span class="font-mulish font-bold text-[0.6rem] w-[4.5rem] mx-auto text-center -top-1 right-2 bg-purple-700 rounded-full text-white absolute">Up to 50% Off</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+                  </button>
+                  <button class="tab-lin flex gap-2 items-center relative" onclick="setActiveTab(event, 2)">
+                      <img src="./images/train-d3e3d1e5.svg" class="w-10 h-10" alt="">
+                      <span class="font-mulish font-bold">Trains</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+                  </button>
+                  <button class="tab-lin flex gap-2 items-center relative" onclick="setActiveTab(event, 3)">
+                      <img src="./images/bus-1942c5dd.svg" class="w-10 h-10" alt="">
+                      <span class="font-mulish font-bold">Buses</span>
+                      <div  class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+                  </button>
+                  <button class="flex gap-2 items-center relative">
+                      <img src="./images/more-b80ac91c.svg" class="w-10 h-10" alt="">
+                      <span class="font-mulish font-bold">More</span>
+                      <img src="./images/down.svg" class="h-6 -ml-1" alt="">
+                  </button>
+           </div>
+          </div>
+          <!-- three ul lists -->
+           <div class="flex items-center gap-10">
+              <!-- two ul lists  -->
+              <div class="flex gap-7 items-center">
+               <div class="flex gap-1">
+                  <img src="./images/offer.svg" class="h-[23px]" alt="">
+                  <span class="font-mulish text-[1.01rem] text-center">Offers</span>
+               </div>
+               <div class="flex gap-1">
+                  <img src="./images/headset.svg" alt="">
+                  <span class="font-mulish text-[1.01rem] text-center">Customer Service</span>
+               </div>
+              </div>
+              <!-- login button  -->
+               <a href="" class="flex gap-4 pr-7 items-center">
+                  <img class="bg-blue-100 border rounded-full p-[0.46rem]" src="./images/userFilled-12154510.svg" alt="">
+                  <span class="font-mulish text-[1.01rem] text-center">Log in/Sign up</span>
+               </a>
+           </div>
+          </div>
+      </nav>
+  </header>
+
+
+    <!-- mobile header  -->
+    <header id="mobile-header" class="bg-yellow-50 block md:hidden">
+      <!-- main div  -->
+      <div class="flex justify-between items-center">
+
+        <!-- logo with text div -->
+         <div class="py-2 pl-4 flex gap-3">
+          <img src="./images/mobile-logo.png" class="h-[3.3rem] rounded-xl" alt="">
+          <!-- text div  -->
+          <div class="flex flex-col gap-1 font-mulish justify-center">
+           <span class="text-md font-bold">Up to 25% OFF on Flights</span>
+           <span class="text-[0.7rem] bg-green-700 rounded-full mr-20 text-center py-[0.1rem] text-white">Use Code: GETAPP</span>
+          </div>
+         </div>
+
+         <!-- button div  -->
+         <div class="border-[0.1rem] border-[orange] rounded-lg mr-4">
+          <button class="font-mulish font-medium py-1 px-2 text-orange-400">Install</button>
+        </div>
+      </div>
+     </header>
+
+
+     <section id="hero">
+      <!-- main div  -->
+       <div class="relative">
+
+          <!-- image row -->
+       <div class="flex justify-between items-center mx-10 -mt-[4rem] md:mt-6">
+
+          <!-- four list items div  -->
+           
+           <div class="flex items-center justify-between gap-[3.8rem] md:gap-6 -mb-2">
+              <!-- items -->
+               <button class="tab-lin flex flex-col md:flex-row md:gap-2 items-center relative" onclick="setActiveTab(event, 0)">
+                      <img src="./images/flight-f515b25a.svg" class="h-10 md:h-14 md:w-12" alt="">
+                      <span class="font-mulish font-bold text-sm md:text-lg">Flights</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2"></div>
+               </button>
+               <button class="tab-lin flex flex-col md:flex-row md:gap-2 items-center relative" onclick="setActiveTab(event, 1)">
+                      <img src="./images/hotel-4b63222d.svg" class="h-10 md:h-14 md:w-12" alt="">
+                      <span class="font-mulish font-bold text-sm md:text-lg">Hotels</span>
+                      <span class="font-mulish font-bold text-[0.6rem] w-[4.5rem] mx-auto text-center -top-1 left-5 bg-purple-700 rounded-full text-white absolute hidden md:block">Up to 50% Off</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+               </button>
+               <button class="tab-lin flex flex-col md:flex-row md:gap-2 items-center relative" onclick="setActiveTab(event, 2)">
+                      <img src="./images/train-d3e3d1e5.svg" class="h-10 md:h-14 md:w-12" alt="">
+                      <span class="font-mulish font-bold text-sm md:text-lg">Trains</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+               </button>
+               <button class="tab-lin flex flex-col md:flex-row md:gap-2 items-center relative" onclick="setActiveTab(event, 3)">
+                      <img src="./images/bus-1942c5dd.svg" class="h-10 md:h-14 md:w-12" alt="">
+                      <span class="font-mulish font-bold text-sm md:text-lg">Buses</span>
+                      <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+               </button>
+              </div>
+            
+
+              
+
+          
+
+
+
+              <!-- h1 tag -->
+              <h2 class="font-mulish text-lg pr-4 hidden md:block mt-3">Flight Booking</h2>
+       </div>
+
+
+
+
+
+  
+
+
+
+       <!-- second div for box -->
+        <div class="relative w-full mt-4 hidden md:block">
+          <!-- inside container -->
+          <div class="w-[96%] border rounded-2xl mx-auto shadow-2xl">
+              <!-- first line div -->
+               <div class="mt-5 ml-5 relative flex justify-between items-center">
+                <!-- button div  -->
+                   <div class="flex gap-3 items-center">
+                      <button class="border rounded-full font-mulish p-2 w-[6rem]">One Way</button>
+                      <button class="border rounded-full font-mulish p-2 w-[6.6rem]">Round Trip</button>
+                   </div>
+
+                   <!-- swipper div  -->
+                    
+                   <!-- Swiper Slider inside .khatarnak -->
+             <div class="khatarnak h-8 w-[17rem] overflow-hidden relative mr-7">
+               <div class="swiper mySwiperg h-24">
+                   <div class="swiper-wrapper">
+                       <!-- Line 1 -->
+                       <li class="swiper-slide flex items-center justify-center">
+                           <div class="h-8 w-[17rem] flex items-center justify-end gap-2">
+                            <img src="./images/offer.svg" class="h-6" alt="">
+                            <span>24x7 Customer Support</span>
+                           </div>
+                       </li>
+                       <!-- Line 2 -->
+                       <li class="swiper-slide flex items-center justify-center">
+                           <div class="h-8 w-[17rem] flex items-center justify-end gap-2">
+                            <img src="./images/offer.svg" alt="">
+                            <span>24x7 Customer Support</span>
+                           </div>
+                       </li>
+                       <!-- Line 3 -->
+                       <li class="swiper-slide flex items-center justify-center">
+                           <div class="h-8 w-[17rem] flex items-center justify-end gap-2">
+                            <img src="./images/offer.svg" alt="">
+                            <span>24x7 Customer Support</span>
+                           </div>
+                       </li>
+                   </div>
+               </div>
+              </div>
+
+
+
+                    </div>
+
+
+              <!-- second line div -->
+               <div class="mt-[0.68rem] mx-5 flex gap-[0.12rem]">
+
+                  <div class="grid grid-cols-2 gap-[0.12rem]">
+                      <input type="text" placeholder="From" class="bg-slate-200 h-[3.8rem] text-lg rounded-l-lg p-2">
+                      <input type="text" placeholder="To" class="bg-slate-200 h-[3.8rem] text-lg p-2">
+                  </div>
+                  <div class="grid grid-cols-2 gap-[0.12rem]">
+                      <input type="text" placeholder="Departure" class="bg-slate-200 h-[3.8rem] text-lg p-2">
+                      <input type="text" placeholder="Return" class="bg-slate-200 h-[3.8rem] text-lg p-2">
+                  </div>
+                  <div class="grid grid-cols-2 gap-[0.12rem]">
+                      <input type="text" placeholder="1 Traveller, Economy" class="bg-slate-200 h-[3.8rem] text-lg p-2">
+                      <button class="bg-orange-500 h-[3.8rem] text-[1.5rem] font-mulish text-white rounded-r-lg flex items-center justify-center gap-4 hover:bg-orange-600 moveArrow">Search
+                          <i class="ri-arrow-right-s-line text-md animate-bounce"></i>
+                      </button>
+              </div>
+               </div>
+
+               <!-- third line div  -->
+                <div class="h-10 mt-5 mx-5 flex justify-between mb-4">
+                  <div class="flex gap-2 items-center">
+                      <h1 class="font-mulish font-bold">Special Fares <span class="font-mulish font-medium">(Optional) :</span></h1>
+                      <!-- buttons div   -->
+                      <div class="flex gap-3">
+
+                          <div class="border text-sm py-1 px-2 rounded-full">
+                              <button class="font-mulish">Student</button>
+                          </div>
+                          <div class="border text-sm py-1 px-2 rounded-full">
+                              <button class="font-mulish">Senior Citizen</button>
+                          </div>
+                          <div class="border text-sm py-1 px-2 rounded-full">
+                              <button class="font-mulish">Armed Forces</button>
+                          </div>
+                      
+                      </div>
+                  </div>
+
+                  <!-- checkbox div  -->
+                    <div class="flex gap-2 items-center justify-center bg-blue-50 my-1 rounded-lg">
+                      <input type="checkbox" class="size-5 ml-2">
+                      <span class="mr-2">Add hotel and save up to 50%</span>
+                   </div>
+                </div>
+
+
+          </div>
+          
+    
+        </div>
+
+
+
+
+        <!-- mobile second div -->
+         <div class="relative md:hidden">
+         <div class="mx-6 mt-4 border-x border-t border-gray-400 rounded-2xl flex flex-col">
+
+            <!-- button div  -->
+             <div class="flex justify-center items-center gap-4 border-b-2">
+              <div class=" bg-[#efefef] rounded-full py-1 px-2 my-[0.6rem]">
+              <button class="py-[0.13rem] px-3 bg-white shadow-lg rounded-full">One Way</button>
+              <button class="py-[0.13rem] px-3 rounded-full">Round Trip</button>
+            </div>
+             </div>
+
+            <!-- second div  -->
+             <div class="flex justify-between items-center border-b-2 gap-4 font-mulish py-2">
+
+              <div class="flex flex-col ml-4 items-center">
+                <h1 class="font-mulish font-bold flex gap-1">DEL <span><img src="./images/takeoff.svg" alt=""></span></h1>
+                <h2 class="font-mulish text-sm text-gray-500">New Dehi</h2>
+              </div>
+
+              <div class="">
+                <img src="./images/2tir.svg" class="p-1 border-2 rounded-full" alt="">
+              </div>
+
+
+               <div class="flex flex-col mr-4 items-center">
+                <h1 class="font-mulish font-bold flex gap-1"><span><img src="./images/landing.svg" alt=""></span>AMD</h1>
+                <h2 class="font-mulish text-sm text-gray-500">Ahmedabad</h2>
+              </div>
+
+
+              </div>
+
+             <!-- third line  ----->
+             <div class="flex justify-start items-center gap-4 border-b-2">
+              <div class="flex gap-2 mx-4 my-[1rem]">
+              <img src="./images/calender.svg" alt="">
+              <span class="font-bold font-mulish">Sun, 06 Apr</span>
+            </div>
+             </div>
+
+             <!-- fourth line  -->
+             <div class="flex justify-start items-center gap-4 border-b-2">
+              <div class="flex gap-2 mx-4 my-[1rem]">
+              <img src="./images/2man.svg" alt="">
+              <h1 class="font-bold font-mulish text-center">1 Traveller <span class="text-xs">•</span> Economy</h1>
+            </div>
+             </div>
+
+             <!-- fifth line  -->
+             <div class="flex justify-start gap-4 border-b-2">
+              <div class="flex flex-col gap-2 mx-4 my-[0.6rem]">
+
+              <h1 class="font-semibold text-xs font-mulish">Special Fares (Optional)</h1>
+              <!-- buttons div  -->
+              <div class="flex gap-3">
+                <div class="border text-sm py-1 px-2 rounded-full">
+                    <button class="font-mulish">Student</button>
+                </div>
+                <div class="border text-sm py-1 px-2 rounded-full">
+                    <button class="font-mulish">Senior Citizen</button>
+                </div>
+                <div class="border text-sm py-1 px-2 rounded-full">
+                    <button class="font-mulish">Armed Forces</button>
+                </div>
+            
+            </div>
+            </div>
+             </div>
+
+
+              <!-- sixthth line  -->
+              <div class="flex justify-between items-center gap-4 bg-blue-50">
+                <div class="mx-4 my-[0.6rem]">
+                  <!-- left part -->
+                  <div class="flex items-center gap-2">
+                <input class="size-5" type="checkbox">
+                <div class="font-mulish flex flex-col">
+                  <h1 class="font-bold">Always opt for Assured</h1>
+                  <!-- swiper div  -->
+                   <span class="text-xs font-semibold">Free cancellation with instant refund</span>
+                </div>
+                </div>
+              </div>
+              <!-- right part image -->
+               <img src="./images/shild.webp" class="h-10 mx-4" alt="">
+               </div>
+
+
+
+               <!-- seventh line -->
+                <button class="bg-orange-500 rounded-b-2xl flex items-center justify-center">
+                  <div class="flex gap-2 my-[0.7rem] items-center">
+                    <img src="./images/search.svg" class="h-6" alt="">
+                    <span class="font-mulish text-white font-semibold text-lg">Search Flights</span>
+                  </div>
+                </button>
+
+
+
+         </div>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+      
+              
+
+  </section>
+
+
+
+    <section id="do-more">
+      <!-- main div  -->
+       <div class="-mt-16 mx-6">
+          <h1 class="font-bold font-mulish text-lg hidden md:block">Do More With ixigo</h1>
+          <!-- container div  -->
+           <div class="w-full grid grid-cols-4 md:grid-cols-8 mt-4 border rounded-2xl md:shadow-xl">
+  
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mt-2 mb-4 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/plan-ff0ec0aa.svg" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mt-2 mb-4 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/world.svg" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mt-2 mb-4 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/acko.webp" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mt-2 mb-4 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/3man.svg" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mb-2 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/plan-ff0ec0aa.svg" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mb-2 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/acko.webp" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="md:border-r-2 flex flex-col items-center gap-2 mb-2 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/3man.svg" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+                  <div class="flex flex-col items-center gap-2 mb-2 md:mt-7 md:mb-5">
+                    <a href="">
+                  <img src="./images/plan-ff0ec0aa.svg" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-sm text-center">Flight <br> Tracker</span>
+                </a>
+              </div>
+           </div>
+       </div>
+    </section>
+
+
+  <!-- mobile section  -->
+  <section id="moblile" class="block md:hidden -mt-14">
+    <!-- main div  -->
+   <div class="flex flex-col  gap-5">
+
+    <!-- text div  -->
+    <div class="font-mulish">
+      <h1 class="mx-6 font-extrabold text-xl">Flight Booking</h1>
+      <span class="mx-6 font-semibold text-sm">Save Instantly on Flight Tickets</span>
+    </div>
+
+    <!-- orange color box div  -->
+     <div class="h-[100px] mx-5 bg-orange-500 rounded-2xl flex justify-between">
+      <img src="./images/airplane.png" class="h-24 ml-8" alt="">
+      <!-- text div  -->
+      <div class="font-mulish text-white mr-5 my-3 items-center justify-end">
+        <h1 class="font-bold text-lg flex flex-col leading-5">Flat 12% Off <span class="text-[1rem] ml-4">on 1st flight</span></h1>
+        <div class="text-sm">
+          <button class="font-mulish border px-2 pb-1 mt-2 ml-14 rounded-md">Login</button>
+      </div>
+      </div>
+
+     </div>
+
+
+
+
+
+
+  </div>
+</section>
+
+
+<section id="swiper-first" class="-mt-16">
+  <h1 class="font-extrabold font-mulish text-[1.3rem] mx-4 mb-5">Today's Flight Offers</h1>
+  <div class="swiper relative h-[200px]">
+    <ul class="swiper-wrapper flex">
+
+      
+      <li class="swiper-slide">
+        <a href="">
+          <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] ml-5 md:ml-0">
+              <img src="./images/s5.webp" class="h-full w-full rounded-2xl" alt="review img"/>       
+          </div>
+        </a>
+        </li>
+      
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s2.png"  class="h-full w-full rounded-2xl" alt="review img"/>       
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s3.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+      <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s4.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s1.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s6.webp"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s7.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s8.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+        </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s9.webp"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s10.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s11.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s12.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s13.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s14.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s15.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s16.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s17.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+      <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s18.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s19.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s20.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s21.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s22.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s23.webp"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s24.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s25.webp"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s26.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s27.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s28.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s29.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s30.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+      <li class="swiper-slide">
+        <a href="">
+        <div class="h-[200px] w-[390px] md:h-[180px] md:w-[295px] mx-4 md:mx-0">
+            <img src="./images/s31.png"  class="h-full w-full  rounded-2xl" alt="review img"/>
+        </div>
+      </a>
+      </li>
+
+    </ul>
+
+    <div class="button-prev bg-white h-10 w-10 rounded-full p-2 z-10 absolute top-[4.6rem] left-0 ml-[0.8rem]">
+      <img src="./images/left.svg" alt="">
+    </div>
+    <div class="button-next bg-white h-10 w-10 rounded-full p-2 z-10 absolute top-[4.6rem] right-0 mr-[1.3rem]">
+      <img src="./images/right.svg" alt="">
+    </div>
+
+
+    </div>
+</section>
+
+
+  <section id="swiper-autoplay" class="-mt-16 ml-2 md:mr-0 md:ml-2">
+    <h1 class="font-bold font-mulish text-lg mx-4 mb-5">Why Book With ixigo?</h1>
+    <!-- swiper div  -->
+    <div class="h-[130px]">
+    <div class="swiper-autoplay relative">
+      <ul class="swiper-wrapper">
+
+        
+        <li class="swiper-slide">
+            <div class="md:h-[100px] md:w-[295px] mx-4 md:mx-0">
+                <img src="./images/i1.png" class="h-full w-full rounded-2xl" alt="review img"/>       
+            </div>
+          </li>
+        
+
+        <li class="swiper-slide">
+          <div class="md:h-[100px] md:w-[295px] mx-4 md:mx-0">
+              <img src="./images/i2.png"  class="h-full w-full rounded-2xl" alt="review img"/>       
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="md:h-[100px] md:w-[295px] mx-4 md:mx-0">
+              <img src="./images/i3.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="md:h-[100px] md:w-[295px] mx-4 md:mx-0">
+              <img src="./images/i4.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="md:h-[100px] md:w-[295px] mx-4 md:mx-0">
+              <img src="./images/i5.png"  class="h-full w-full rounded-2xl" alt="review img"/>
+          </div>
+        </li>
+
+      </ul>
+
+
+      <div class="button-prev bg-white h-10 w-10 rounded-full p-2 z-10 absolute top-[30%] left-0 ml-[0.8rem] hidden md:block">
+        <img src="./images/left.svg" alt="">
+      </div>
+      <div class="button-next bg-white h-10 w-10 rounded-full p-2 z-10 absolute top-[30%] right-0 mr-[1.3rem] hidden md:block">
+        <img src="./images/right.svg" alt="">
+      </div>
+
+     
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="last-swiper" class="-mt-24">
+    <!-- main div  -->
+     <div class="px-6 my-4 flex">
+      <h1 class="font-mulish font-bold text-lg">Cheapest Fares From</h1>
+      <!-- button  -->
+       <div class="mt-[0.1rem]">
+      <div class="border rounded-2xl ml-2 py-[0.3rem] px-1">
+        <button class="font-mulish font-medium text-sm flex gap-1 ml-1">New Delhi
+          <img src="./images/down.svg" class="h-5" alt="">
+        </button>
+      </div>
+    </div>
+    </div>
+      <!-- swiper div  -->
+       <div class="swiperl h-[259px] [w-1240px] mx-6 relative hidden md:block">
+        <div class="swiper-wrapper h-[259px] [w-1200px]">
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l1.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l2.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l3.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l4.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l5.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l6.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l7.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l8.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l9.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l11.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l20.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l12.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l13.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l14.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l15.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l16.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l17.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l18.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l19.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l20.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l21.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l22.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l23.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l24.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l25.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l26.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l27.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l28.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l29.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+           <!-- box -->
+           <div class="swiper-slide h-[259px] w-[282px] border rounded-2xl">
+              <!-- img div  -->
+              <div class="h-[160px] w-[286px]">
+                <img src="./images/l30.jpg" class="h-full w-full rounded-t-2xl" alt="">
+              </div>
+              <!-- text div  -->
+              <div class="flex flex-col">
+                <h1 class="font-mulish font-extrabold text-lg mx-4 mt-2">Bathinda, <span class="font-medium">Punjab</span></h1>
+                <div class="mx-4 flex justify-between mt-[0.36rem]">
+                  <div class="flex flex-col -gap-10">
+                    <h1 class="font-mulish font-medium text-sm">Thu, 17 Apr</h1>
+                    <h1 class="font-mulish font-extrabold text-[0.96rem]">₹2,100 <span class="font-medium">onwards</span></h1>
+                  </div>
+
+                  <!-- button  -->
+                  <div class="border-[0.1rem] border-[orange] rounded-xl ">
+                    <button class="font-mulish font-medium py-2 px-4 text-orange-400">Book Flight</button>
+                  </div>
+
+                </div>
+              </div>
+           </div>
+         
+          
+         
+        
+         
+      
+         
+           
+
+        </div>
+
+        <!-- button  -->
+        <div class="button-prev bg-white h-10 w-10 rounded-full p-2 z-10 absolute top-[40%] left-0 ml-[0.8rem]">
+          <img src="./images/left.svg" alt="">
+        </div>
+        <div class="button-next bg-white h-10 w-10 rounded-full p-2 z-10 absolute top-[40%] right-0 mr-[0.8rem]">
+          <img src="./images/right.svg" alt="">
+        </div>
+
+
+     </div>
+
+
+
+
+     <!-- mobile view  -->
+     <div class="block md:hidden">
+
+      <div class="mx-6 grid gap-x-3 gap-y-4 grid-cols-2">
+
+
+   <!-- box 1 -->
+    <div class="rounded-2xl shadow-xl">
+      <div class="">
+        <div class="h-[165px] w-[185px]">
+        <img src="./images/l1.jpg" class="h-full w-full rounded-t-2xl" alt="">
+      </div>
+        <!-- text div  -->
+         <div class="mx-4 my-2 font-mulish">
+          <div class="leading-6">
+          <h1>Hissar</h1>
+          <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+        </div>
+          <span class="flex gap-1 mt-1">
+            <h1 class="font-bold">₹1,199</h1>
+            <img src="./images/right.svg" alt="">
+          </span>
+         </div>
+      </div>
+    </div>
+
+   <!-- box 2 -->
+    <div class="rounded-2xl shadow-xl">
+      <div class="">
+        <div class="h-[165px] w-[185px]">
+        <img src="./images/l2.jpg" class="h-full w-full rounded-t-2xl" alt="">
+      </div>
+        <!-- text div  -->
+         <div class="mx-4 my-2 font-mulish">
+          <div class="leading-6">
+          <h1>Hissar</h1>
+          <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+        </div>
+          <span class="flex gap-1 mt-1">
+            <h1 class="font-bold">₹1,199</h1>
+            <img src="./images/right.svg" alt="">
+          </span>
+         </div>
+      </div>
+    </div>
+
+   <!-- box 3 -->
+    <div class="rounded-2xl shadow-xl">
+      <div class="">
+        <div class="h-[165px] w-[185px]">
+        <img src="./images/l3.jpg" class="h-full w-full rounded-t-2xl" alt="">
+      </div>
+        <!-- text div  -->
+         <div class="mx-4 my-2 font-mulish">
+          <div class="leading-6">
+          <h1>Hissar</h1>
+          <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+        </div>
+          <span class="flex gap-1 mt-1">
+            <h1 class="font-bold">₹1,199</h1>
+            <img src="./images/right.svg" alt="">
+          </span>
+         </div>
+      </div>
+    </div>
+
+   <!-- box 4 -->
+    <div class="rounded-2xl shadow-xl">
+      <div class="">
+        <div class="h-[165px] w-[185px]">
+        <img src="./images/l4.jpg" class="h-full w-full rounded-t-2xl" alt="">
+      </div>
+        <!-- text div  -->
+         <div class="mx-4 my-2 font-mulish">
+          <div class="leading-6">
+          <h1>Hissar</h1>
+          <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+        </div>
+          <span class="flex gap-1 mt-1">
+            <h1 class="font-bold">₹1,199</h1>
+            <img src="./images/right.svg" alt="">
+          </span>
+         </div>
+      </div>
+    </div>
+
+   <!-- box 5 -->
+    <div class="rounded-2xl shadow-xl">
+      <div class="">
+        <div class="h-[165px] w-[185px]">
+        <img src="./images/l5.jpg" class="h-full w-full rounded-t-2xl" alt="">
+      </div>
+        <!-- text div  -->
+         <div class="mx-4 my-2 font-mulish">
+          <div class="leading-6">
+          <h1>Hissar</h1>
+          <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+        </div>
+          <span class="flex gap-1 mt-1">
+            <h1 class="font-bold">₹1,199</h1>
+            <img src="./images/right.svg" alt="">
+          </span>
+         </div>
+      </div>
+    </div>
+
+   <!-- box 6 -->
+    <div class="rounded-2xl shadow-xl">
+      <div class="">
+        <div class="h-[165px] w-[185px]">
+        <img src="./images/l6.jpg" class="h-full w-full rounded-t-2xl" alt="">
+      </div>
+        <!-- text div  -->
+         <div class="mx-4 my-2 font-mulish">
+          <div class="leading-6">
+          <h1>Hissar</h1>
+          <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+        </div>
+          <span class="flex gap-1 mt-1">
+            <h1 class="font-bold">₹1,199</h1>
+            <img src="./images/right.svg" alt="">
+          </span>
+         </div>
+      </div>
+    </div>
+
+  </div>
+
+ <!-- view more button  -->
+
+   <div id="question" class="mx-5 mt-5">
+    <div class="flex flex-col justify-center items-center">
+    <h1 class="text-md font-bold">Continue exploring destinations</h1>
+
+    <div class="mt-2 px-4 py-2 rounded-xl border-2 border-yellow-500">
+      <button id="showMore" class="font-mulish font-semibold text-yellow-600 ">Show More</button>
+     </div>
+   </div>
+   </div>
+      
+
+
+
+    <div class="hidden" id="hide">
+
+      <div class="mx-6 mt-4 grid gap-x-3 gap-y-4 grid-cols-2">
+
+
+        <!-- box 7 -->
+         <div class="rounded-2xl shadow-xl">
+           <div class="">
+             <div class="h-[165px] w-[185px]">
+             <img src="./images/l1.jpg" class="h-full w-full rounded-t-2xl" alt="">
+           </div>
+             <!-- text div  -->
+              <div class="mx-4 my-2 font-mulish">
+               <div class="leading-6">
+               <h1>Hissar</h1>
+               <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+             </div>
+               <span class="flex gap-1 mt-1">
+                 <h1 class="font-bold">₹1,199</h1>
+                 <img src="./images/right.svg" alt="">
+               </span>
+              </div>
+           </div>
+         </div>
+     
+        <!-- box 8 -->
+         <div class="rounded-2xl shadow-xl">
+           <div class="">
+             <div class="h-[165px] w-[185px]">
+             <img src="./images/l2.jpg" class="h-full w-full rounded-t-2xl" alt="">
+           </div>
+             <!-- text div  -->
+              <div class="mx-4 my-2 font-mulish">
+               <div class="leading-6">
+               <h1>Hissar</h1>
+               <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+             </div>
+               <span class="flex gap-1 mt-1">
+                 <h1 class="font-bold">₹1,199</h1>
+                 <img src="./images/right.svg" alt="">
+               </span>
+              </div>
+           </div>
+         </div>
+     
+        <!-- box 9 -->
+         <div class="rounded-2xl shadow-xl">
+           <div class="">
+             <div class="h-[165px] w-[185px]">
+             <img src="./images/l3.jpg" class="h-full w-full rounded-t-2xl" alt="">
+           </div>
+             <!-- text div  -->
+              <div class="mx-4 my-2 font-mulish">
+               <div class="leading-6">
+               <h1>Hissar</h1>
+               <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+             </div>
+               <span class="flex gap-1 mt-1">
+                 <h1 class="font-bold">₹1,199</h1>
+                 <img src="./images/right.svg" alt="">
+               </span>
+              </div>
+           </div>
+         </div>
+     
+        <!-- box 10 -->
+         <div class="rounded-2xl shadow-xl">
+           <div class="">
+             <div class="h-[165px] w-[185px]">
+             <img src="./images/l4.jpg" class="h-full w-full rounded-t-2xl" alt="">
+           </div>
+             <!-- text div  -->
+              <div class="mx-4 my-2 font-mulish">
+               <div class="leading-6">
+               <h1>Hissar</h1>
+               <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+             </div>
+               <span class="flex gap-1 mt-1">
+                 <h1 class="font-bold">₹1,199</h1>
+                 <img src="./images/right.svg" alt="">
+               </span>
+              </div>
+           </div>
+         </div>
+     
+        <!-- box 11 -->
+         <div class="rounded-2xl shadow-xl">
+           <div class="">
+             <div class="h-[165px] w-[185px]">
+             <img src="./images/l5.jpg" class="h-full w-full rounded-t-2xl" alt="">
+           </div>
+             <!-- text div  -->
+              <div class="mx-4 my-2 font-mulish">
+               <div class="leading-6">
+               <h1>Hissar</h1>
+               <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+             </div>
+               <span class="flex gap-1 mt-1">
+                 <h1 class="font-bold">₹1,199</h1>
+                 <img src="./images/right.svg" alt="">
+               </span>
+              </div>
+           </div>
+         </div>
+     
+        <!-- box 12 -->
+         <div class="rounded-2xl shadow-xl">
+           <div class="">
+             <div class="h-[165px] w-[185px]">
+             <img src="./images/l6.jpg" class="h-full w-full rounded-t-2xl" alt="">
+           </div>
+             <!-- text div  -->
+              <div class="mx-4 my-2 font-mulish">
+               <div class="leading-6">
+               <h1>Hissar</h1>
+               <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+             </div>
+               <span class="flex gap-1 mt-1">
+                 <h1 class="font-bold">₹1,199</h1>
+                 <img src="./images/right.svg" alt="">
+               </span>
+              </div>
+           </div>
+         </div>
+     
+       </div>
+
+
+
+
+<!-- view more button  -->
+
+<div id="ques" class="mx-5 mt-5">
+  <div class="flex flex-col justify-center items-center">
+  <h1 class="text-md font-bold">Continue exploring destinations</h1>
+
+  <div class="mt-2 px-4 py-2 rounded-xl border-2 border-yellow-500">
+    <button id="show" class="font-mulish font-semibold text-yellow-600 ">Show More</button>
+   </div>
+ </div>
+ </div>
+
+
+
+
+    </div>
+
+
+
+
+   <div class="hidden" id="hiden">
+
+    <div class="mx-6 mt-4 grid gap-x-3 gap-y-4 grid-cols-2">
+
+
+      <!-- box 13 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l1.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 14 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l2.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 15 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l3.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 16 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l4.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 17 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l5.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 18 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l6.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+     </div>
+
+ <!-- view more button  -->
+
+<div id="que" class="mx-5 mt-5">
+  <div class="flex flex-col justify-center items-center">
+  <h1 class="text-md font-bold">Continue exploring destinations</h1>
+
+  <div class="mt-2 px-4 py-2 rounded-xl border-2 border-yellow-500">
+    <button id="sho" class="font-mulish font-semibold text-yellow-600 ">Show More</button>
+   </div>
+ </div>
+ </div>
+
+
+
+  </div>
+
+
+
+
+   <div class="hidden" id="hidens">
+
+    <div class="mx-6 mt-4 grid gap-x-3 gap-y-4 grid-cols-2">
+
+
+      <!-- box 19 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l1.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 20 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l2.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 21 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l3.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 22 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l4.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 23 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l5.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 24 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l6.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+     </div>
+
+<!-- view more button  -->
+
+<div id="qu" class="mx-5 mt-5">
+  <div class="flex flex-col justify-center items-center">
+  <h1 class="text-md font-bold">Continue exploring destinations</h1>
+
+  <div class="mt-2 px-4 py-2 rounded-xl border-2 border-yellow-500">
+    <button id="sh" class="font-mulish font-semibold text-yellow-600 ">Show More</button>
+   </div>
+ </div>
+ </div>
+
+
+
+  </div>
+
+
+
+
+  <div class="hidden" id="hidenss">
+
+    <div class="mx-6 mt-4 grid gap-x-3 gap-y-4 grid-cols-2 mb-4">
+
+
+      <!-- box 25 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l1.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="/.images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 26 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l2.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 27 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l3.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 28 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l4.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 29 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l5.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+      <!-- box 30 -->
+       <div class="rounded-2xl shadow-xl">
+         <div class="">
+           <div class="h-[165px] w-[185px]">
+           <img src="./images/l6.jpg" class="h-full w-full rounded-t-2xl" alt="">
+         </div>
+           <!-- text div  -->
+            <div class="mx-4 my-2 font-mulish">
+             <div class="leading-6">
+             <h1>Hissar</h1>
+             <span class="text-sm text-gray-500">Fri, 18 Apr</span>
+           </div>
+             <span class="flex gap-1 mt-1">
+               <h1 class="font-bold">₹1,199</h1>
+               <img src="./images/right.svg" alt="">
+             </span>
+            </div>
+         </div>
+       </div>
+   
+     </div>
+
+
+
+
+  </div>
+
+
+
+
+  </div>
+
+      
+  </section>
+ 
+
+  <section id="popular-flights">
+    <!-- main div  -->
+     <div class="-mt-16 mx-6">
+      <h1 class="font-bold font-mulish text-lg">Popular Flight Routes</h1>
+      <!-- all dives section  -->
+       <div class="pt-5">
+          <!-- 1st div  -->
+           <div class="flex border rounded-xl gap-3">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/1.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 2nd div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/2.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 3rd div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/3.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 4th div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/4.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 5th div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/5.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 6th div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/6.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 7th div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/7.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 8th div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/8.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+          <!-- 9th div  -->
+           <div class="flex border rounded-xl gap-3 mt-4">
+              <!-- image div  -->
+               <div class="">
+                  <img src="./images/9.webp" class="h-16 w-14 rounded-l-lg" alt="">
+               </div>
+               <!-- text section  -->
+                <div class="flex flex-col justify-center">
+                  <h1 class="font-mulish font-bold text-lg">Mumbai Flights</h1>
+                  <span class="flex text-sm">
+                      To: 
+                      <ul class="flex mx-1 gap-2 text-blue-600 text-sm items-center">
+                          <li><a href="">Goa</a></li>
+                          <li class="list-disc ml-4"><a href="">Delhi</a></li>
+                          <li class="list-disc ml-4"><a href="">Bangalore</a></li>
+                          <li class="list-disc ml-4"><a href="">Ahmedabad</a></li>
+                      </ul>
+                  </span>
+                </div>
+           </div>
+       </div>
+     </div>
+  </section>
+
+
+    <section id="popular-flightss" class="hidden md:block">
+      <!-- main div  -->
+       <div class="-mt-16 mx-6">
+          <h1 class="font-bold font-mulish text-lg">Popular Domestic Airlines</h1>
+          <!-- container div  -->
+           <div class="w-full grid grid-cols-6 space-x-2 mt-4 border rounded-xl">
+                  
+            <a href="">
+                  <div class="flex flex-col items-center gap-2 mt-7 mb-5">
+                  <img src="./images/w1.png" class="h-10 w-10" alt="">
+                  <span class="font-mulish  font-bold text-[1rem] text-blue-600 text-center">IndiGo</span>
+                  </div>
+            </a>
+
+
+            <a href="">
+                  <div class="flex flex-col items-center gap-2 mt-6 mb-5">
+                  <img src="./images/w2.png" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-[1rem] font-bold text-blue-600 text-center">Alliance Air</span>
+                  </div>
+            </a>
+
+
+            <a href="">
+                  <div class="flex flex-col items-center gap-2 mt-7 mb-5">
+                  <img src="./images/w3.png" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-[1rem] font-bold text-blue-600 text-center">Air India</span>
+              </div>
+            </a>
+
+
+            <a href="">
+                  <div class="flex flex-col items-center gap-2 mt-7 mb-5">
+                  <img src="./images/w4.png" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-[1rem] font-bold text-blue-600 text-center">Air India Express</span>
+              </div>
+            </a>
+
+
+            <a href="">
+                  <div class="flex flex-col items-center gap-2 mt-7 mb-5">
+                  <img src="./images/w5.png" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-[1rem] font-bold text-blue-600 text-center">Akasa Air</span>
+              </div>
+            </a>
+
+
+            <a href="">
+                  <div class="flex flex-col items-center gap-2 mt-7 mb-5">
+                  <img src="./images/w6.png" class="h-10 w-10" alt="">
+                  <span class="font-mulish text-[1rem] font-bold text-blue-600 text-center">SpiceJet</span>
+              </div>
+            </a>
+
+
+           </div>
+       </div>
+    </section>
+
+
+      <section id="questions">
+        <!-- main div  -->
+         <div class="-mt-6 mx-6 border rounded-2xl">
+            <h1 class="my-4 mx-5 font-mulish font-extrabold text-lg">Frequently Asked Questions</h1>
+            <!-- Question answer container  -->
+
+             <div id="sparent" class="my-8 mx-5 border-b pb-3">
+
+                <div id="sdegree" class="flex justify-between">
+                    <span class="font-mulish font-bold text-md">Why is flight ticket booking the cheapest on ixigo?</span>
+                    <img id="srotate" src="./images/down.svg" class="rotate-180" alt="">
+                </div>
+
+                <div id="spara" class="mx-5 font-mulish block">
+                  <p class="-mx-4 mt-4">ixigo directly searches multiple airline websites for the cheapest fares. Many airlines prefer to sell their cheapest flight tickets on ixigo. Additionally, with its exclusive offers and deals, including several bank and partner offers, ixigo serves as the best platform to book cheap flights. You also get additional discounts with special fares for students, armed forces and senior citizens. Some of the ongoing flight deals include:</p>
+                  <ul class="list-decimal my-3">
+                    <li>Get up to Rs. 3000 Off on flights with ICICI Bank Credit Cards EMI.</li>
+                    <li>Flat Rs. 555 Off on Flight Bookings via MobiKwik wallet.</li>
+                    <li>Get Flat 12% Off on flights with RBL Bank on Credit Card EMI</li>
+                  </ul>
+                  <p class="-mx-4">There are a number of other options for you to choose from visit ixigo flight offers for the best flight deal.</p>
+                </div>
+
+             </div>
+
+
+
+             <div id="sparent" class="mt-8 mb-4 mx-5 border-b pb-3">
+
+                <div id="sdegree" class="flex justify-between">
+                    <span class="font-mulish font-bold text-md">How do I book cheap flight tickets?</span>
+                    <img id="srotate" src="./images/down.svg" class="rotate-180" alt="">
+                </div>
+
+
+                <div  id="spara" class="mx-5 font-mulish block">
+                  <p class="-mx-4 mt-4">Here's how you can book cheap flight tickets</p>
+                  <ul class="list-disc my-3">
+                    <li>Book your flights from ixigo in advance to get the cheapest deals.</li>
+                    <li>Be flexible, and consider flying during off-peak hours to get cheaper flight tickets.</li>
+                    <li>ixigo's fare alerts feature sends you notifications when the air ticket price on your route gets cheap.</li>
+                    <li>If you have time, try stopover flights as flights with multiple stops are often cheaper.</li>
+                    <li>Avoid traveling on weekends, as air tickets are usually higher during this time.</li>
+                    <li>Try budget airlines like Indigo, Air India to book cheap flight tikets.</li>
+                  </ul>
+              
+                </div>
+
+
+             </div>
+
+
+
+             <!-- view more button  -->
+
+             <div  id="asking" class=" -mt-2 text-center mb-4 hover:bg-yellow-200 hover:transition-all duration-200 mx-5 p-2 rounded-xl">
+              <button class="font-mulish font-semibold text-yellow-600 ">View More</button>
+             </div>
+             
+
+
+             <div class="hidden" id="gayabb">
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                  <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">What are the benefits of flight booking with ixigo?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                  </div>
+
+                  <div id="para" class="mx-5 font-mulish hidden">
+                    <p class="-mx-4 mt-4">The benefits of booking with ixigo include cheap fares, easy ticket booking, real-time flight status tracking, exclusive flight ticket offers, flexible date options, auto web-checkin and quick refunds.</p>
+                  </div>
+                 
+             </div>
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">How do you make flexible online flight ticket booking with changeable dates?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">Select your preferred flight and opt for 'Assured Flex' on the 'Review Flight' page to make flexible online flight ticket bookings with changeable dates. This will allow you to modify your travel dates</p>
+                </div>
+
+             </div>
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">Can I modify or cancel my booking?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">Yes, you can modify or cancel your flight with Assured and Assured Flex fares. Assured offers free cancellations on new bookings, while Assured Flex provides free cancellations or one-time free rescheduling, including date, airline, and route changes.</p>
+                </div>
+
+             </div>
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">Can I upgrade my seat after booking?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">Yes, you can upgrade your seat by paying an additional fee. You can also choose a seat during web check-in, which usually begins 48 hours before the flight's departure.</p>
+                </div>
+
+             </div>
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">Are there any special fares for children, infants, or senior citizens?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">ixigo offers up to a 10% discount on base fares for senior citizens aged 60 and older. It also offers up to a 10% discount on base fares and extra baggage allowance for students aged 12 and above..</p>
+                </div>
+
+             </div>
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">Can I book additional baggage through ixigo?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">Yes, you can book additional baggage through ixigo by selecting the option during flight booking or managing your booking later, depending on the airline's policy. This is applicable on ixigo for some airlines like IndiGo, Akasa Air, etc.</p>
+                </div>
+
+             </div>
+
+             <div id="parent" class="my-6 mx-5 border-b pb-3">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">How to check flight status on ixigo?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">To check flight status, open the flight status page, enter your flight details, and view real-time updates on your flight.</p>
+                </div>
+
+             </div>
+
+             <div id="parent" class="my-4 mx-5">
+                <div id="degree" class="flex justify-between cursor-pointer py-2">
+                    <span class="font-mulish font-bold text-md">How can I get domestic flight offers on ixigo?</span>
+                    <img id="rotate" src="./images/down.svg" alt="">
+                </div>
+
+                <div id="para" class="mx-5 font-mulish hidden">
+                  <p class="-mx-4 mt-4">To get domestic flight offers on ixigo:</p>
+                 
+                  <ul class="list-decimal my-3">
+                    <li>Visit the ixigo website and enter your travel dates and destination.</li>
+                    <li>Click on the "offers" tab to view available discounts and promotions on domestic flights.</li>
+                    <li>Choose your preferred offer and make the payment at the time of booking using various payment options, including credit and debit cards, net banking, and wallets.</li>
+                  </ul>
+                  <p class="-mx-4">ixigo offers various cashback offers on domestic flight bookings from time to time.</p>
+                  
+                </div>
+
+
+              </div>
+
+
+
+
+
+
+             </div>
+         </div>
+    </section>
+
+
+    <section id="text">
+      <!-- main div  -->
+       <div class="-mt-16 mx-6">
+           <!-- first div  -->
+            <div class="my-4">
+              <h1 class="font-mulish font-extrabold text-2xl">Flight Ticket Booking</h1>
+              <p class="font-mulish mt-3">ixigo has a database of all domestic and international flights and airlines in the world with its user-friendly interface, which makes it easy to search and make a flight booking. Earn ixigo money on every flight booking. Redeem ixigo money on future bookings to get <span class="font-bold">cheaper flight tickets and save money.</span></p>
+            </div>
+           <!-- second div  -->
+            <div class="my-4">
+              <h1 class="font-mulish font-extrabold text-2xl">Cheap Flight Ticket</h1>
+              <ul class="my-2 list-disc font-mulish mx-5 flex flex-col gap-2">
+                  <li><span class="font-bold"> Cheap flights are available at ixigo</span> for both domestic and international destinations. ixigo aggregates and compares real-time and future date travel information, prices, and availability for flights to provide you with the cheapest flight tickets, flight deals, offers, and discounts. Easily find cheaper flight ticket/air tickets as compared to other websites.</li>
+                  <li>ixigo offers multiple banks, airlines, and other partner deals that give you <span class="font-bold"> instant savings on air tickets.</span></li>
+                  <li>On ixigo, you can save up to 40% on <span class="font-bold"> air ticket booking</span> online with our fare alert feature on domestic and <span class="text-blue-600"> international flights.</span></li>
+                  <li>You can also select ixigo's Special Fares (Student/Senior Citizen/ Armed Forces) to book flights at cheaper prices. By opting for these Special Fares, you can get great discounts on available flight options.</li>
+              </ul>
+              <a href="" class="font-mulish">See all<span class="text-blue-600"> flight booking offers.</span></a>
+            </div>
+             <!-- third div  -->
+             <div class="my-4">
+              <h1 class="font-mulish font-extrabold text-2xl">Domestic Flight Booking</h1>
+              <p class="font-mulish mt-3">ixigo is a leading flight booking platform in India, providing flight bookings at low prices. ixigo offers a wide range of flight options from different airlines, so you can be sure to find a cheap flight that best suits your travel needs. You can also use ixigo to compare flight prices and book cheap air tickets. Book flights with top domestic airlines like:
+                  <span><a href="" class="text-blue-600 font-semibold">Air India</a>,</span>
+                  <span><a href="" class="text-blue-600 font-semibold"> Indigo Airlines</a>,</span>
+                  <span><a href="" class="text-blue-600 font-semibold"> Spicejet</a>,</span>
+                  <span><a href="" class="text-blue-600 font-semibold"> AirAsia</a>,</span>
+                  <span><a href="" class="text-blue-600 font-semibold"> Air-India express</a></span>
+                  and enjoy a hassle free trip experience.
+              </p>
+            </div>
+       </div>
+
+  </section>
+
+
+    <section id="all-routes" class="bg-slate-50">
+      <!-- main div  -->
+       <div class="-mb-7 -mt-24 md:mt-0">
+
+
+          <!-- first box div  -->
+       <div class="mx-6 -mt-14 hidden md:block">
+          <!-- navbar div  -->
+          <div class="border-b">
+
+              <ul class="flex gap-12 font-semibold font-mulish">
+                  <li onclick="openTab(event, 'popular')" class="tab-link hover:bg-blue-50 cursor-pointer text-blue-600  font-semibold border-b-4 border-blue-600 pb-2">Popular Flight Routes
+                  </li>
+                  <li onclick="openTab(event, 'top')" class="tab-link cursor-pointer text-gray-600 pb-2">Top Flight Routes
+                  </li>
+                  <li onclick="openTab(event, 'trending')" class="tab-link cursor-pointer text-gray-600 pb-2">Trending Flight Routes
+                  </li>
+                  <li  onclick="openTab(event, 'airlines')" class="tab-link cursor-pointer text-gray-600 pb-2">Airlines
+                  </li>
+                  <li onclick="openTab(event, 'populars')" class="tab-link cursor-pointer text-gray-600 pb-2">Popular Airlines Routes
+                  </li>
+              </ul>
+
+          </div>
+
+
+
+
+
+
+          <!-- this div for Popular flight routes  -->
+           <div id="popular" class="tab-content">
+          <div class="grid grid-cols-5 mt-4">
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+          <!-- this div for Top Flight Routes  -->
+           <div id="top" class="tab-content mt-4 hidden">
+          <div class="grid grid-cols-5 mt-4">
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Pakistan to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+          <!-- this div for Trending Flight Routes  -->
+           <div id="trending" class="tab-content mt-4 hidden">
+          <div class="grid grid-cols-5 mt-4">
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">America to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+          <!-- this div for Airlines  -->
+           <div id="airlines" class="tab-content mt-4 hidden">
+          <div class="grid grid-cols-5 mt-4">
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Japan to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+          <!-- this div for Popular Airlines Routes  -->
+           <div id="populars" class="tab-content mt-4 hidden">
+          <div class="grid grid-cols-5 mt-4">
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Africa to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 text-sm mb-4 font-mulish">
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+                  <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+       </div>
+
+       <!-- first box in mobile  -->
+        <!-- main div -->
+       <div class="bg-white -mb-8 -mt-28 block md:hidden">
+
+        <div id="parent" class="my-6 mx-5 border-b pt-3 pb-3">
+          <div class="-mb-2">
+          <div id="degree" class="flex justify-between cursor-pointer py-2">
+            <span class="font-mulish font-bold text-[1.08rem]">Popular Flight Routes</span>
+            <img id="rotate" src="./images/down.svg" alt="">
+          </div>
+        </div>
+
+          <div id="para" class="mx-5 font-mulish hidden">
+            <div class="-mx-5 mt-4">
+              <ul class="flex flex-col gap-2 pb-1 text-blue-600 font-semibold text-[1rem]">
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+            </div>
+          </div>
+         
+     </div>
+
+        <div id="parent" class="my-6 mx-5 border-b pt-1 pb-3">
+          <div class="-mb-2">
+          <div id="degree" class="flex justify-between cursor-pointer py-2">
+            <span class="font-mulish font-bold text-[1.08rem]">Top Flight Routes</span>
+            <img id="rotate" src="./images/down.svg" alt="">
+          </div>
+        </div>
+
+          <div id="para" class="mx-5 font-mulish hidden">
+            <div class="-mx-5 mt-4">
+              <ul class="flex flex-col gap-2 pb-1 text-blue-600 font-semibold text-[1rem]">
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+            </div>
+          </div>
+         
+     </div>
+
+        <div id="parent" class="my-6 mx-5 border-b pt-1 pb-3">
+          <div class="-mb-2">
+          <div id="degree" class="flex justify-between cursor-pointer py-2">
+            <span class="font-mulish font-bold text-[1.08rem]">Trending Flight Routes</span>
+            <img id="rotate" src="./images/down.svg" alt="">
+          </div>
+        </div>
+
+          <div id="para" class="mx-5 font-mulish hidden">
+            <div class="-mx-5 mt-4">
+              <ul class="flex flex-col gap-2 pb-1 text-blue-600 font-semibold text-[1rem]">
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+            </div>
+          </div>
+         
+     </div>
+
+        <div id="parent" class="my-6 mx-5 border-b pt-1 pb-3">
+          <div class="-mb-2">
+          <div id="degree" class="flex justify-between cursor-pointer py-2">
+            <span class="font-mulish font-bold text-[1.08rem]">Airlines</span>
+            <img id="rotate" src="./images/down.svg" alt="">
+          </div>
+        </div>
+
+          <div id="para" class="mx-5 font-mulish hidden">
+            <div class="-mx-5 mt-4">
+              <ul class="flex flex-col gap-2 pb-1 text-blue-600 font-semibold text-[1rem]">
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+            </div>
+          </div>
+         
+     </div>
+
+        
+
+       
+
+       
+        <div id="parent" class="my-6 mx-5 pt-1 pb-8">
+          <div id="degree" class="flex justify-between cursor-pointer py-2">
+            <span class="font-mulish font-bold text-[1.08rem]">Popular Airlines Routes</span>
+            <img id="rotate" src="./images/down.svg" alt="">
+          </div>
+
+          <div id="para" class="mx-5 font-mulish hidden">
+            <div class="-mx-5 mt-2">
+              <ul class="flex flex-col gap-2 pb-6 text-blue-600 font-semibold text-[1rem]">
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+                <li><a href="">Delhi to Kolkata flights</a></li>
+              </ul>
+            </div>
+          </div>
+         
+     </div>
+
+       
+
+        
+        
+
+     
+
+
+       </div>
+
+
+       <!-- second box  -->
+        <div class="mx-0 md:mx-2 my-7 mt-16 md:mt-0 md:border-t-2 bg-gray-50 md:bg-white">
+          <div class="mx-5 mt-7">
+              <p class="font-mulish text-sm font-semibold">Important Links</p>
+              <ul class="text-xs font-mulish mt-5 flex flex-wrap gap-x-7 leading-7">
+                  <li><a href="">Indigo Flight Status</a></li>
+                  <li><a href="">Air India Flight Status</a></li>
+                  <li><a href="">Spicejet Flight Status</a></li>
+                  <li><a href="">Flight Status</a></li>
+                  <li><a href="">Vistara Flight Status</a></li>
+                  <li><a href="">Student Flight Booking</a></li>
+                  <li><a href="">Senior Citizen Flight Booking</a></li>
+                  <li><a href="">Armed Forces Flight Booking</a></li>
+                  <li><a href="">Air India Express Flight Status</a></li>
+                  <li><a href="">International Flights</a></li>
+                  <li><a href="">Flights Offers</a></li>
+                  <li><a href="">Travel Stories</a></li>
+                  <li class="mb-7"><a href="">Responsible Disclosure</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+  </section> 
+
+
+
+    <footer class="bg-slate-200 mb-2 -mt-[1rem]">
+      <!-- main div  -->
+       <div class="flex flex-col items-center w-full">
+          <!-- first line div  -->
+           <div class="flex flex-row gap-5 mt-5">
+              <div class="h-10 w-32">
+                  <img src="./images/playstore.png" class="h-full w-full" alt="">
+              </div>
+              <div class="h-10 w-32">
+                  <img src="./images/appstore.png" class="h-full w-full" alt="">
+              </div>
+           </div>
+           <!-- second line div  -->
+            <div class="mt-2 flex flex-col items-center gap-2">
+              <ul class="flex flex-wrap font-mulish text-[0.6rem] gap-4 list-disc">
+                  <li class="list-none"><a href="">Advertise with us</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Investor Relations</a></li>
+                  <li><a href="">CSR</a></li>
+                  </ul>
+                  <ul class="flex flex-wrap font-mulish text-[0.6rem] gap-4 list-disc">
+                  <li class="list-none"><a href="">Privacy</a></li>
+                  <li><a href="">Terms of Use</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a href="">Customer Service</a></li>
+              </ul>
+              <h1 class="font-mulish text-[0.6rem] mx-14 text-center leading-3">© 2025 Le Travenues Technology Ltd. India. All brands are trademarks of their respective owners.</h1>
+            </div>
+             <!-- fourth line div  -->
+              <div class="mt-3 flex flex-row gap-7 mb-24 md:marker:b-24">
+                  <img src="./images/facebook-37d8ee4a.svg" class="h-7" alt="">
+                  <img src="./images/twitter-d2a36113.svg" class="h-7" alt="">
+                  <img src="./images/instagram-d0da5301.svg" class="h-7" alt="">
+                  <img src="./images/linkedin-1be5dd03.svg" class="h-7" alt="">
+                  <img src="./images/youtube-2a587dd6.svg" class="h-7" alt="">
+              </div>
+       </div>
+  </footer>
+
+
+    <!-- mobile navbar  -->
+    <div class="fixed bottom-0 w-full z-30 bg-white block md:hidden">
+      <div class="flex justify-between w-[90%] mx-auto">
+
+        <button class="tab-lin p-1 flex flex-col items-center gap-1 relative" onclick="setActiveTab(event, 0)">
+        <img src="./images/homeFilled-93682da6.svg" class="h-8 mt-2" alt="">
+        <span class="font-mulish text-xs font-bold">Home</span>
+        <div class="under-linee h-1 w-full bg-orange-500 rounded-2xl absolute top-0"></div>
+        </button>
+        <button class="tab-lin p-1 flex flex-col items-center gap-1 relative" onclick="setActiveTab(event, 1)">
+        <img src="./images/money.svg" class="h-8 mt-2" alt="">
+        <span class="font-mulish text-xs font-bold">Home</span>
+        <div class="under-linee h-1 w-full bg-orange-500 rounded-2xl absolute top-0 hidden"></div>
+        </button>
+        <button class="tab-lin p-1 flex flex-col items-center gap-1 relative" onclick="setActiveTab(event, 2)">
+        <img src="./images/tripsOutlined-0ce722f1.svg" class="h-8 mt-2" alt="">
+        <span class="font-mulish text-xs font-bold">Home</span>
+        <div class="under-linee h-1 w-full bg-orange-500 rounded-2xl absolute top-0 hidden"></div>
+        </button>
+        <button class="tab-lin p-1 flex flex-col items-center gap-1 relative" onclick="setActiveTab(event, 3)">
+        <img src="./images/contactOutlined-19c31081.svg" class="h-8 mt-2" alt="">
+        <span class="font-mulish text-xs font-bold">Home</span>
+        <div class="under-linee h-1 w-full bg-orange-500 rounded-2xl absolute top-0 hidden"></div>
+        </button>
+        <button class="tab-lin p-1 flex flex-col items-center gap-1 relative" onclick="setActiveTab(event, 4)">
+        <img src="./images/moreOutlined-670d6970.svg" class="h-8 mt-2" alt="">
+        <span class="font-mulish text-xs font-bold">Home</span>
+        <div class="under-linee h-1 w-full bg-orange-500 rounded-2xl absolute top-0 hidden"></div>
+        </button>
+        
+        
+      </div>
+    </div>
+
+
+    <!-- top fixed navbar  -->
+    <div class="sm:block md:hidden">
+      <div id="fixed" class="fixed top-0 bg-white h-[4.8rem] w-full z-50 shadow-white hidden">
+  
+        <!-- four list items div  -->
+         
+         <div class="flex items-center justify-between gap-[3.8rem] -mb-2 mt-2 mx-10">
+            <!-- items -->
+             <button class="tab-lin flex flex-col items-center relative" onclick="setActiveTab(event, 0)">
+                    <img src="./images/flight-f515b25a.svg" class="h-10" alt="">
+                    <span class="font-mulish font-bold text-sm">Flights</span>
+                    <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2"></div>
+             </button>
+             <button class="tab-lin flex flex-col items-center relative" onclick="setActiveTab(event, 1)">
+                    <img src="./images/hotel-4b63222d.svg" class="h-10" alt="">
+                    <span class="font-mulish font-bold text-sm">Hotels</span>
+                    <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+             </button>
+             <button class="tab-lin flex flex-col items-center relative" onclick="setActiveTab(event, 2)">
+                    <img src="./images/train-d3e3d1e5.svg" class="h-10" alt="">
+                    <span class="font-mulish font-bold text-sm">Trains</span>
+                    <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+             </button>
+             <button class="tab-lin flex flex-col items-center relative" onclick="setActiveTab(event, 3)">
+                    <img src="./images/bus-1942c5dd.svg" class="h-10" alt="">
+                    <span class="font-mulish font-bold text-sm">Buses</span>
+                    <div class="under-linee h-[0.3rem] w-full bg-blue-700 absolute bottom-0 rounded-2xl -mb-2 hidden"></div>
+             </button>
+            </div>
+          
+  
+            <div id="search" class="bg-white w-full z-50 shadow-white pb-3 hidden">
+            <div class="mx-6 mt-4 bg-blue-100 rounded-3xl flex justify-between p-2">
+              <div class="flex gap-2 items-center ml-2">
+                <img src="./images/search (2).svg" class="ml-2" alt="">
+                <div class="font-mulish leading-5">
+                  <h1 class="text-sm font-bold">DEL - AMD • 09 Apr</h1>
+                  <h2 class="text-sm">1 Traveller • Economy</h2>
+                </div>
+              </div>
+  
+              <div class="bg-orange-400 rounded-r-3xl flex items-center -my-2 -mr-2">
+                <button class="font-mulish text-lg px-6 text-white font-bold">Search</button>
+              </div>
+  
+            </div>
+  
+          </div>
+      
+  
+  
+    </div>
+  
+  </div>
+
+
+  <!-- Swiper JS cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- hanwritten swiper js link  -->
+   <script src="swiper.js"></script>
+
+
+   <script src="script.js"></script>
+
+</body>
+</html>
