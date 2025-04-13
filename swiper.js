@@ -2,43 +2,87 @@
 
 // <!-- Initialize Swiper Ist -->
 const swiper = new Swiper(".swiper", {
-    // slidesPerView: 4,
     centeredSlides: false,
     slidesPerGroupSkip: 1,
-    // spaceBetween: 10,
     mousewheel: true,
     keyboard: true,
-    cssMode: true,  breakpoints: {
+    cssMode: true,
+    breakpoints: {
       // when window width is >= 640px
-      640: {
-        slidesPerView: 1,
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       // when window width is >= 768px
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
       // when window width is >= 1020px
       1020: {
         slidesPerView: 4,
-        spaceBetween: 10,
+        spaceBetween: 20,
       },
     },
+    spaceBetween: 20,
 
     navigation: {
       nextEl: ".button-next",
       prevEl: ".button-prev",
     },
 
-    // grid: {
-    //   rows: 1,
-    // },
+    grid: {
+      rows: 1,
+    },
   });
 
 // <!-- Initialize Swiper 2nd autoplay -->
 const swipers = new Swiper(".swiper-autoplay", {
-  spaceBetween: 10,
+  // spaceBetween: 20,
   centeredSlides: false,
   slidesPerGroupSkip: 1,
+  mousewheel: true,
+  keyboard: true,
+  cssMode: true,
+  breakpoints: {
+    // when window width is >= 640px
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    // when window width is >= 1020px
+    1020: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+  spaceBetween: 20,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+    },
+  // slidesPerView: 4,
+    grid: {
+      rows: 1,
+    },
+});
+
+// <!-- Initialize Swiper 3rd -->
+
+const swiperl = new Swiper(".swiperl", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  slidesPerGroupSkip: 1,
+  // spaceBetween: 20,
   mousewheel: true,
   keyboard: true,
   cssMode: true,
@@ -50,38 +94,15 @@ const swipers = new Swiper(".swiper-autoplay", {
     },
     // when window width is >= 768px
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
+      spaceBetween: 20,
     },
     // when window width is >= 1020px
     1020: {
       slidesPerView: 4,
-      spaceBetween: 10,
+      spaceBetween: 20,
     },
   },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-      nextEl: ".button-next",
-      prevEl: ".button-prev",
-    },
-  // slidesPerView: 4,
-  //   grid: {
-  //     rows: 1,
-  //   },
-});
-
-// <!-- Initialize Swiper 3rd -->
-
-const swiperl = new Swiper(".swiperl", {
-  slidesPerView: 1,
-  centeredSlides: false,
-  slidesPerGroupSkip: 1,
-  spaceBetween: 20,
-  mousewheel: true,
-  keyboard: true,
-  cssMode: true,
   navigation: {
       nextEl: ".button-next",
       prevEl: ".button-prev",
@@ -91,6 +112,15 @@ const swiperl = new Swiper(".swiperl", {
     rows: 1,
   },
 });
+
+
+
+
+
+
+
+
+
 
 
 

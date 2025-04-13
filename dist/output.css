@@ -667,11 +667,6 @@ section{
   margin-right: -0.25rem;
 }
 
-.-mx-2{
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-}
-
 .-mx-4{
   margin-left: -1rem;
   margin-right: -1rem;
@@ -807,10 +802,6 @@ section{
   margin-right: -0.5rem;
 }
 
-.-mr-4{
-  margin-right: -1rem;
-}
-
 .-mt-14{
   margin-top: -3.5rem;
 }
@@ -867,6 +858,10 @@ section{
   margin-bottom: 1.75rem;
 }
 
+.mb-8{
+  margin-bottom: 2rem;
+}
+
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -877,6 +872,10 @@ section{
 
 .ml-2{
   margin-left: 0.5rem;
+}
+
+.ml-3{
+  margin-left: 0.75rem;
 }
 
 .ml-4{
@@ -971,10 +970,6 @@ section{
   margin-top: 0.68rem;
 }
 
-.ml-3{
-  margin-left: 0.75rem;
-}
-
 .block{
   display: block;
 }
@@ -1040,28 +1035,20 @@ section{
   height: 100px;
 }
 
-.h-\[130px\]{
-  height: 130px;
+.h-\[10rem\]{
+  height: 10rem;
 }
 
-.h-\[160px\]{
-  height: 160px;
+.h-\[10remx\]{
+  height: 10remx;
 }
 
-.h-\[180px\]{
-  height: 180px;
-}
-
-.h-\[200px\]{
-  height: 200px;
+.h-\[11\.3rem\]{
+  height: 11.3rem;
 }
 
 .h-\[23px\]{
   height: 23px;
-}
-
-.h-\[259px\]{
-  height: 259px;
 }
 
 .h-\[3\.3rem\]{
@@ -1070,6 +1057,10 @@ section{
 
 .h-\[3\.8rem\]{
   height: 3.8rem;
+}
+
+.h-\[6\.2rem\]{
+  height: 6.2rem;
 }
 
 .h-\[70px\]{
@@ -1094,18 +1085,6 @@ section{
 
 .w-\[17rem\]{
   width: 17rem;
-}
-
-.w-\[282px\]{
-  width: 282px;
-}
-
-.w-\[286px\]{
-  width: 286px;
-}
-
-.w-\[330px\]{
-  width: 330px;
 }
 
 .w-\[4\.5rem\]{
@@ -1774,30 +1753,18 @@ section{
 }
 
 @media (min-width: 768px){
-  .md\:mx-0{
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:mx-2{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
 
+  .md\:mx-6{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
   .md\:mb-5{
     margin-bottom: 1.25rem;
-  }
-
-  .md\:ml-0{
-    margin-left: 0px;
-  }
-
-  .md\:ml-2{
-    margin-left: 0.5rem;
-  }
-
-  .md\:mr-0{
-    margin-right: 0px;
   }
 
   .md\:mt-0{
@@ -1824,20 +1791,8 @@ section{
     height: 3.5rem;
   }
 
-  .md\:h-\[100px\]{
-    height: 100px;
-  }
-
-  .md\:h-\[180px\]{
-    height: 180px;
-  }
-
   .md\:w-12{
     width: 3rem;
-  }
-
-  .md\:w-\[295px\]{
-    width: 295px;
   }
 
   .md\:grid-cols-8{
