@@ -128,7 +128,7 @@ window.addEventListener("scroll", Gayab)
 
 const Fixed = () => {
     const Agga = document.getElementById("fixed")
-    if(this.scrollY >= 59) {
+    if(this.scrollY >= 69) {
         Agga.classList.remove("hidden")
     } else {
         Agga.classList.add("hidden")

@@ -3,7 +3,7 @@
   content: ["index.html"],
   theme: {
     screens: {
-      sm: "427px",
+      sm: "432px",
       md: "768px",
       lg: "1024px"
     },

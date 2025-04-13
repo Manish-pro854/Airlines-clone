@@ -580,9 +580,9 @@ section{
   width: 100%;
 }
 
-@media (min-width: 427px){
+@media (min-width: 432px){
   .container{
-    max-width: 427px;
+    max-width: 432px;
   }
 }
 
@@ -660,6 +660,10 @@ section{
 
 .z-50{
   z-index: 50;
+}
+
+.col-span-4{
+  grid-column: span 4 / span 4;
 }
 
 .-mx-4{
@@ -767,6 +771,16 @@ section{
   margin-bottom: 1rem;
 }
 
+.mx-8{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .-mb-2{
   margin-bottom: -0.5rem;
 }
@@ -783,8 +797,8 @@ section{
   margin-left: -0.25rem;
 }
 
-.-ml-2{
-  margin-left: -0.5rem;
+.-ml-12{
+  margin-left: -3rem;
 }
 
 .-mr-2{
@@ -951,6 +965,26 @@ section{
   margin-top: 0.68rem;
 }
 
+.-mb-20{
+  margin-bottom: -5rem;
+}
+
+.-mt-10{
+  margin-top: -2.5rem;
+}
+
+.-mt-12{
+  margin-top: -3rem;
+}
+
+.-mt-1{
+  margin-top: -0.25rem;
+}
+
+.-mt-4{
+  margin-top: -1rem;
+}
+
 .block{
   display: block;
 }
@@ -1056,6 +1090,82 @@ section{
   height: 100%;
 }
 
+.h-\[\]{
+  height: ;
+}
+
+.h-\[10rem\]{
+  height: 10rem;
+}
+
+.h-\[100rem\]{
+  height: 100rem;
+}
+
+.h-\[rem\]{
+  height: rem;
+}
+
+.h-\[2rem\]{
+  height: 2rem;
+}
+
+.h-\[7rem\]{
+  height: 7rem;
+}
+
+.h-\[9rem\]{
+  height: 9rem;
+}
+
+.h-\[12rem\]{
+  height: 12rem;
+}
+
+.h-\[11rem\]{
+  height: 11rem;
+}
+
+.h-\[10\.5rem\]{
+  height: 10.5rem;
+}
+
+.h-\[10\.4rem\]{
+  height: 10.4rem;
+}
+
+.h-\[10\.rem\]{
+  height: 10.rem;
+}
+
+.h-\[10\.35rem\]{
+  height: 10.35rem;
+}
+
+.h-\[10\.3rem\]{
+  height: 10.3rem;
+}
+
+.h-\[4rem\]{
+  height: 4rem;
+}
+
+.h-\[3rem\]{
+  height: 3rem;
+}
+
+.h-\[2\.9rem\]{
+  height: 2.9rem;
+}
+
+.h-\[5rem\]{
+  height: 5rem;
+}
+
+.h-\[4\.5rem\]{
+  height: 4.5rem;
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -1112,6 +1222,62 @@ section{
   width: 100%;
 }
 
+.w-\[\]{
+  width: ;
+}
+
+.w-\[2rem\]{
+  width: 2rem;
+}
+
+.w-\[1rem\]{
+  width: 1rem;
+}
+
+.w-\[\.rem\]{
+  width: .rem;
+}
+
+.w-\[0\.1rem\]{
+  width: 0.1rem;
+}
+
+.w-\[0\.2rem\]{
+  width: 0.2rem;
+}
+
+.w-\[2px\]{
+  width: 2px;
+}
+
+.w-\[3rem\]{
+  width: 3rem;
+}
+
+.w-\[4rem\]{
+  width: 4rem;
+}
+
+.w-\[3\.8rem\]{
+  width: 3.8rem;
+}
+
+.w-\[3\.6rem\]{
+  width: 3.6rem;
+}
+
+.w-\[rem\]{
+  width: rem;
+}
+
+.w-\[3\.7rem\]{
+  width: 3.7rem;
+}
+
+.min-w-\[56px\]{
+  min-width: 56px;
+}
+
 .rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1163,6 +1329,10 @@ section{
 
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-rows-1{
+  grid-template-rows: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -1437,6 +1607,11 @@ section{
   background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
 }
 
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-1{
   padding: 0.25rem;
 }
@@ -1545,6 +1720,10 @@ section{
 
 .pt-\[15px\]{
   padding-top: 15px;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -1728,13 +1907,17 @@ section{
   background-color: rgb(254 240 138 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
 .hover\:transition-all:hover{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-@media (min-width: 427px){
+@media (min-width: 432px){
   .sm\:block{
     display: block;
   }
@@ -1783,6 +1966,10 @@ section{
     display: block;
   }
 
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:hidden{
     display: none;
   }
@@ -1811,8 +1998,24 @@ section{
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:flex-col{
+    flex-direction: column;
+  }
+
+  .md\:items-center{
+    align-items: center;
+  }
+
+  .md\:justify-between{
+    justify-content: space-between;
   }
 
   .md\:gap-2{
@@ -1821,6 +2024,10 @@ section{
 
   .md\:gap-6{
     gap: 1.5rem;
+  }
+
+  .md\:gap-\[3\.8rem\]{
+    gap: 3.8rem;
   }
 
   .md\:border-r-2{
