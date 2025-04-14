@@ -24,7 +24,7 @@ const swiper = new Swiper(".swiper", {
         spaceBetween: 20,
       },
     },
-    spaceBetween: 20,
+    // spaceBetween: 20,
 
     navigation: {
       nextEl: ".button-next",
