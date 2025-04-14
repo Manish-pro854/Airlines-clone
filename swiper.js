@@ -30,6 +30,7 @@ const swiper = new Swiper(".swiper", {
       nextEl: ".button-next",
       prevEl: ".button-prev",
     },
+    slidesPerView: "auto",
 
     grid: {
       rows: 1,
