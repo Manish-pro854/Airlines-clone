@@ -1779,6 +1779,26 @@ section{
     margin-top: 1.75rem;
   }
 
+  .md\:ml-\[\]{
+    margin-left: ;
+  }
+
+  .md\:ml-\[1rem\]{
+    margin-left: 1rem;
+  }
+
+  .md\:ml-\[10rem\]{
+    margin-left: 10rem;
+  }
+
+  .md\:ml-\[2rem\]{
+    margin-left: 2rem;
+  }
+
+  .md\:ml-\[1\.5rem\]{
+    margin-left: 1.5rem;
+  }
+
   .md\:block{
     display: block;
   }
